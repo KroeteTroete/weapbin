@@ -1,7 +1,7 @@
 # weapbin
 Weapbin is a script used for modifying the weapons.bin file of Galaxy On Fire 2.
 The weapons.bin file of GOF2 stores the coordinates of every hardpoint (Primary weapon, secondary weapon, turret and engine) of every ship. The file can be edited by manually searching for the ship ID and total amount of hardpoints of a ship inside a hex editor and then modifying the coordinate-bytes. This script creates a JSON file for every ship, placing it's hardpoint information into it. This not only makes it easier to modify existing coordinates of hardpoints, but also adding completely new hardpoints. Once the modifications have been made, weapbin can build and new functional weapons.bin file.
-<h4>This wouldn't have been possible without the huge amount of effort put in by Pb-207, who's published an overview of how weapons.bin is structured into the Kaamo Club Discord's modding channel</h4>
+<h4>This wouldn't have been possible without the huge amount of effort put in by Pb-207, who has published an overview of weapons.bin's structure into the Kaamo Club Discord's modding channel</h4>
 
 # How to use - Extracting
 The weapons.bin file can be found in the data/bin folder inside the GOF2 directory. Place the weapons.bin file into the same folder as the weapbin.py script. Open the folder containing both files in CMD or Powershell and type: "python .\weapbin.py extract". You will find around 40 to 43 (the amount will depend on which version of the game you're modifying) JSON files inside your folder. 
