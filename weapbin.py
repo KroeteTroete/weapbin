@@ -1,4 +1,4 @@
-#This script writes all the data from weapons.bin into JSON and can also build a new weapons.bin from JSON
+#This script writes all the data from weapons.bin into JSON
 import struct
 import json
 import os
@@ -8,7 +8,7 @@ def leBytesInt(file):
     #converts the next 2 bytes to an integer
     next2 = file.read(2)
     print(next2)
-    converted2Bytes = int.from_bytes(next2, "little")
+    converted2Bytes = int.from_bytes(next2, "little",signed = True)
     return converted2Bytes
 
 def leBytesFloat(file):
@@ -224,7 +224,7 @@ def build():
                                 elif k in j and "size" in j:
                                     print("writing " + j)
                                     # Float is inside a list object, that's why
-                                    # there'S the loadedJSON[j][0] statement.
+                                    # there's the loadedJSON[j][0] statement.
                                     inBytes = struct.pack('<f', loadedJSON[j][0])
                                     w.write(inBytes)
 
