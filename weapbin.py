@@ -210,7 +210,7 @@ def build():
 
                         if j == 'ID' or j == 'total':
                             print("writing " + j)
-                            inBytes = struct.pack('<H', loadedJSON[j])
+                            inBytes = struct.pack('<h', loadedJSON[j])
                             w.write(inBytes)
                             #print(inBytes)
                         else: 
@@ -218,7 +218,7 @@ def build():
 
                                 if k in j and "coord" in j:
                                     print("writing " + j)
-                                    inBytes = struct.pack('<H', loadedJSON[j])
+                                    inBytes = struct.pack('<h', loadedJSON[j])
                                     w.write(inBytes)
                                 
                                 elif k in j and "size" in j:
@@ -234,22 +234,22 @@ def build():
 
                                     if k == "primary":
                                         print("Writing primary seperator")
-                                        inBytes = struct.pack('<H', 0)
+                                        inBytes = struct.pack('<h', 0)
                                         w.write(inBytes)
                                         
                                     elif k == "secondary":
                                         print("Writing secondary seperator")
-                                        inBytes = struct.pack('<H', 1)
+                                        inBytes = struct.pack('<h', 1)
                                         w.write(inBytes)
 
                                     elif k == "turret":
                                         print("Writing turret seperator")
-                                        inBytes = struct.pack('<H', 2)
+                                        inBytes = struct.pack('<h', 2)
                                         w.write(inBytes)
 
                                     elif k == "engine":
                                         print("Writing engine seperator")
-                                        inBytes = struct.pack('<H', 3)
+                                        inBytes = struct.pack('<h', 3)
                                         w.write(inBytes)
 
 argNum = len(sys.argv)
