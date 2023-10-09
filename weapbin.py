@@ -1,4 +1,4 @@
-#This script writes all the data from weapons.bin into JSON
+#This script writes all the data from weapons.bin into JSON and can also build a new weapons.bin from JSON
 import struct
 import json
 import os
